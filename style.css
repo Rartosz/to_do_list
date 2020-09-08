@@ -1,0 +1,539 @@
+*
+{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background: rgb(80,201,255);
+    background: linear-gradient(180deg, rgba(80,201,255,1) 0%, rgba(21,55,173,1) 100%);
+        background-position:center;
+        background-size:600%;
+        width:100vw;
+        height:100vh;
+}
+.preloader
+{
+    background: rgb(80,201,255);
+    background: linear-gradient(180deg, rgba(80,201,255,1) 0%, rgba(21,55,173,1) 100%);
+        background-position:center;
+        background-size:600%;
+        width:100vw;
+        height:100vh;
+        display:flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+}
+
+@keyframes preloaderAnimation
+{
+    0%{opacity:1;}
+    100%{opacity:0;}
+
+}
+.preloaderAnimationClass
+{
+    animation:preloaderAnimation 3s ease;
+    animation-iteration-count: 1;
+}
+.loadingText
+{
+    font-size:51px;
+    font-family: 'Roboto', sans-serif;
+    transform:translateY(10px);
+    color:black;
+
+}
+.water{
+    width:400px;
+    height: 400px;
+    background-color: skyblue;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
+    overflow: hidden;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.water:before, .water:after{
+    content:'';
+    position: absolute;
+    width:400px;
+    height: 400px;
+    top:-150px;
+    background-color: #fff;
+}
+.water:before{
+    border-radius: 45%;
+    background:rgba(255,255,255,.7);
+    animation:wave 5s linear infinite;
+}
+.water:after{
+    border-radius: 35%;
+    background:rgba(255,255,255,.3);
+    animation:wave 5s linear infinite;
+}
+@keyframes wave{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! END OF PRELOADER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+.name-container
+{
+    display:none;
+    width:100vw;
+    height:100vh;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+@keyframes NCAnimation
+{
+    0%{opacity:0; transform:translateY(-400px);}
+    100%{opacity:1;transform:translateY(0px);}
+}
+
+.nameContainerAnimationClass 
+{
+    animation:NCAnimation 1.3s ease;
+    animation-iteration-count: 1;
+
+}
+
+
+h1 
+{
+    font-size:50px;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin-bottom:25px;
+}
+
+.name 
+{
+    background:rgba(255, 255, 255, 0.13);
+    border:3px solid rgba(255, 255, 255, 0.26);
+    width:300px;
+    height:55px;
+    border-radius:15px;
+    color:rgba(255, 255, 255, 0.747);
+    font-size:40px;
+    font-family:sans-serif;
+    font-weight: 100;
+    padding:6px;
+    text-align:center;
+    transition:opacity 0.4s;
+
+}
+
+
+.name:hover{
+    opacity:0.5;
+    transition:0.4s;
+}
+
+.createList
+{
+    margin-top:50px;
+    width: 250px;
+    height: 70px;
+    color:rgba(6, 230, 6, 0.822);
+    border:3px solid rgba(6, 230, 6, 0.849);
+    background:transparent;
+    font-size:40px;
+    padding:6px;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+    border-radius:15px;
+    transition:opacity 0.4s;
+}
+
+.createList:hover{
+    opacity:0.5;
+    transition:0.4s;
+    cursor: pointer;
+}
+
+
+
+.name-ending-animation
+{
+    animation: preloaderAnimation 2s ease;
+    animation-iteration-count: 1;
+
+}
+
+
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! END OF ENTERING NAME CONTAINER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.containerAnimation 
+{
+    animation: NCAnimation 2s ease;
+    animation-iteration-count: 1;
+}
+.container
+{
+ background:transparent;
+    width:100vw;
+    height:100vh;
+    
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display:none;
+}
+
+.list 
+{
+    width:330px;
+    height:540px;
+    background:rgba(255, 255, 255, 0.925);
+    border-radius:12px;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(50, 50, 50, 0.9);
+-moz-box-shadow:    0px 0px 14px 0px rgba(50, 50, 50, 0.9);
+box-shadow:         0px 0px 14px 0px rgba(50, 50, 50, 0.9);
+display:flex;
+position:relative;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+
+
+}
+
+.date 
+{
+    width:100%;
+    position:relative;
+    height:80px;
+    background:transparent;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius:12px 12px 0px 0px;
+    
+}
+
+.fullDate
+{
+    width:40%;
+    height:100%;
+    background:transparent;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+    font-family: 'Roboto', sans-serif;
+}
+
+.d 
+{
+    font-size:50px;
+    color:rgb(85, 84, 84);
+    margin-right:5px;
+}
+
+.yAndMo 
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size:19px;
+
+}
+
+.y
+{
+    color:rgb(175, 175, 175);
+    /* margin:10px 0px 0px 10px; */
+}
+.m 
+{
+    color:rgb(122, 121, 121);
+}
+
+.day 
+{
+    width:60%;
+    height:100%;
+    
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.dayName 
+{
+    color:rgb(122, 121, 121);
+    font-size:18px;
+    font-family: 'Roboto', sans-serif;
+    margin-right:25px;
+    font-weight:500;
+}
+
+
+.displayName
+{
+    color:rgb(122, 121, 121);
+    
+    height:fit-content;
+    font-size:18px;
+    font-family: 'Roboto', sans-serif;
+    margin-right:25px;
+    font-weight:500;
+}
+
+.to-do-list
+{
+    width:100%;
+    height:400px;
+    overflow: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position:relative;
+    margin-bottom:0px;
+    
+}
+
+
+
+.task 
+{
+    width:80%;
+    height:50px;
+    min-height: 50px;
+    border-radius: 50px;
+    margin: 12px 0px;
+    border:1px solid rgb(233, 230, 230);
+    -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.486);
+-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.486);
+box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.486);
+position:relative;
+font-size:15px;
+color:rgb(122, 121, 121);
+font-family: 'Roboto', sans-serif;
+display:flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+padding:0px 15px;
+
+
+}
+p1
+{
+    width:70%;
+}
+
+.delate
+{
+    width:30px;
+    height:30px;
+    background-image:url('images/delate.png');
+    background-size:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:relative;
+    transition:opacity 0.4s;
+    
+}
+.delate:hover{
+    opacity:0.6;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.done
+{
+    width:30px;
+    height:30px;
+    background-image:url('images/done.png');
+    background-size:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:relative;
+    transition:opacity 0.4s;
+    margin-left:15px;
+    
+}
+.done:hover{
+    opacity:0.6;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.addContainer
+{
+    width:100%;
+    height:70px;
+    
+    position:absolute;
+    top:87%;
+    background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%);
+    border-radius:12px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index:3;
+    
+}
+
+.add 
+{
+    width:50px;
+    height:50px;
+    border-radius:100%;
+    background-color:rgb(217, 66, 255);
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size:35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    transition: opacity 0.4s;
+}
+.add:hover
+{
+    opacity:0.6;
+    cursor: pointer;
+    transition:0.4s;
+}
+
+
+.description
+{
+    width:100vw;
+    height:100vh;
+    background:rgba(0, 0, 0, 0.767);
+    position:absolute;
+    display:none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index:1000;
+}
+
+.descriptionAnimationClass
+{
+    animation:inputAnimation 1.4s ease;
+    animation-iteration-count: 1;
+}
+
+.inputContainer
+{
+    width:440px;
+    height:200px;
+    background-color:#dddddd;
+    border-radius:12px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+
+@keyframes inputAnimation 
+{
+    0%{opacity:0; }
+    100%{opacity:1;}
+}
+.taskText
+{
+    width: 250px;
+    height:70px;
+    font-size:27px;
+    font-family: 'Roboto', sans-serif;
+    color:rgba(54, 54, 54, 0.781);
+    border-radius: 50px;
+background: #dddddd;
+box-shadow:  20px 20px 60px #bcbcbc, 
+             -20px -20px 60px #fefefe;
+border:none;
+padding: 0px 15px;
+
+}
+
+.input:focus
+{
+    border-radius: 50px;
+    background: linear-gradient(145deg, #c7c7c7, #ececec);
+    box-shadow:  20px 20px 60px #bcbcbc, 
+                 -20px -20px 60px #fefefe;
+            
+}
+
+
+.addElement
+{
+    width:50px;
+    height:50px;
+    background-image:url('images/done.png');
+    background-position: center;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-color:transparent;
+    border:none;
+    margin-left:20px;
+    transition:opacity 0.4s;
+}
+
+.addElement:hover{
+    opacity:0.4;
+    transition:0.4s;
+    cursor: pointer;
+}
+
+.cancel 
+{
+    width:50px;
+    height:50px;
+    background-image:url('images/delate.png');
+    background-position: center;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-color:transparent;
+    border:none;
+    margin-left:20px;
+    transition:opacity 0.4s;
+}
+
+.cancel:hover 
+{
+    opacity:0.4;
+    transition:0.4s;
+    cursor: pointer;
+}
+
+.finished
+{
+    text-decoration: line-through;
+    opacity:0.3;
+}
