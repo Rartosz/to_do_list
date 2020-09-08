@@ -481,7 +481,7 @@ padding: 0px 15px;
 
 }
 
-.input:focus
+.taskText:focus
 {
     border-radius: 50px;
     background: linear-gradient(145deg, #c7c7c7, #ececec);
