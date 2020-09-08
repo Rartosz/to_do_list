@@ -50,41 +50,9 @@ let actualDate = () =>
     let day = new Date().getDate();
     let d = document.querySelector(".d");
 
-    if( day == 1)
+    if( day.toString().length == 1)
     {
-        d.textContent = "0"+day;
-    }
-    else if(day==2)
-    {
-        d.textContent = "0"+day;
-    }
-    else if(day==3)
-    {
-        d.textContent = "0"+day;
-    }
-    else if(day==4)
-    {
-        d.textContent = "0"+day;
-    }
-    else if(day==5)
-    {
-        d.textContent = "0"+day;
-    }
-    else if(day==6)
-    {
-        d.textContent = "0"+day;
-    }
-    else if(day==7)
-    {
-        d.textContent = "0"+day;
-    }
-    else if(day==8)
-    {
-        d.textContent = "0"+day;
-    }
-    else if(day==9)
-    {
-        d.textContent = "0"+day;
+        d.textContent = "0" + day;
     }
     else 
     {
