@@ -1,4 +1,4 @@
-# This is the simple todo list with extra styles.
+# This is the simple todo list with extra styles. Also it shows actual date (day of month, month, year and day of the week).
 
 
 #### Technology used: 
